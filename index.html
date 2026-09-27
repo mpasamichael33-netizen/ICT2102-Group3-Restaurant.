@@ -1,52 +1,363 @@
-  <!Doctype html>
-  <html>
-    <head>
-        <title>KALIRO TASTE RESTAURANT</title></head>
-    <body><h1>DELICIOUS, FRESH FOOD AND HAPPY MOMENTS READILY AVAILABLE</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Group Three Restaurant offers a refined dining experience with fresh flavors, signature dishes, and warm hospitality."
+    />
+    <title>Group Three Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a href="#home" class="brand" aria-label="Group Three Restaurant home">
+          <span class="brand-mark">GT</span>
+          <span class="brand-text">Group Three</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+
+        <a href="#contact" class="button button-primary nav-button">Book a Table</a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
     <main>
-        <h2>WELCOME TO KALIRO TASTE RESTAURANT</h2>
-        <p>Welcome to <b>Kaliro taste restaurant</b>afreindly and a welcoming retstaurant located in <b>KALIRO DISRTCT UGANDA</b> we are commited to provide our customers with <b>fresh, delicious, affordable and quality meals</b>in a clean and comfortable environment with beautiful scenaries. Our restaurant serves a variety of local and international dishes, together with refreshing drinks, to meet the need of different customers. We welcome students, workers, families, travellers and vistors to enjoy good food and the most friendly customer services. At kaliro taste restaurant, <b> your satisfaction is our priority</b></p>
-   <h2>ABOUT US</h2>
-   <p>Kaliro Taste Restaurant is a family-owned establishment that has been serving the community for over a decade. We take pride in our commitment to quality and customer satisfaction.</p>
-   <h2>OUR FOOD</h2>
-   <ul>
-    <li>matooke and beef</li>
-    <li>chicken and rice</li>
-    <li>fish and matooke</li>
-    <li>beef and rice</li>
-<li> katogo a</li>
-</ul>
-    <h3>OUR SERVICES</h3>
-<Ul>
-    <li>Takeaway</li>
-    <li>Dine-in</li>
-    <li>Delivery</li>
-    <li> Catering</li>
-    <li>Online Ordering</li>
-    <li>breakfast</li>
-    <li>lunch</li>
-</Ul>
-<h2>Process</h2>
-<ol>
-    <li>Choose your meal from our menu</li>
-    <li>Place your order with our friendly staff</li>
-    <li>Enjoy your meal in our comfortable dining area or take it to go</li>
-    <li>Leave us feedback to help us improve our services</li>
-    <li>Share your experience with friends and family</li>
-    <li>Come back and visit us again for more delicious meals!</li>
-    <li>Follow us on social media to stay updated on our latest offerings and promotions</li>
-       </ol><!why to choose us>
-<h2>WHY CHOOSE US</h2><p>At Kaliro Taste Restaurant, we are dedicated to providing our customers with the best dining experience possible. Here are some reasons why you should choose us:</p>
-<ul>
-    <li>Fresh and high-quality ingredients</li>
-    <li>Friendly and attentive staff</li>
-    <li>Clean and comfortable dining area</li>
-    <li>Affordable prices</li>
-    <li>Variety of local and international dishes</li>
-    <li>Convenient location in Kaliro District, Uganda</li>
-</ul>
+      <section id="home" class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Fresh flavors. Timeless ambiance.</p>
+            <h1>Fine dining that brings people together.</h1>
+            <p class="lead">
+              Discover a modern culinary experience where locally inspired dishes,
+              curated wines, and warm hospitality create unforgettable evenings.
+            </p>
+            <div class="hero-actions">
+              <a href="#menu" class="button button-primary">Explore Menu</a>
+              <a href="#services" class="button button-secondary">Our Services</a>
+            </div>
+            <ul class="hero-points" aria-label="Restaurant highlights">
+              <li>Chef-crafted menu</li>
+              <li>Luxury dining experience</li>
+              <li>Open daily for lunch & dinner</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Restaurant dining table image">
+            <div class="image-card main-card">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+                alt="Elegant restaurant interior"
+              />
+            </div>
+            <div class="floating-card floating-card-top">
+              <span class="score">4.9</span>
+              <p>Guest rating</p>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span>Chef’s special</span>
+              <strong>Truffle Pasta</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-bar">
+        <div class="container feature-grid">
+          <div>
+            <strong>15+</strong>
+            <span>Signature dishes</span>
+          </div>
+          <div>
+            <strong>12 yrs</strong>
+            <span>Crafting memorable experiences</span>
+          </div>
+          <div>
+            <strong>3,500+</strong>
+            <span>Happy guests served</span>
+          </div>
+          <div>
+            <strong>Daily</strong>
+            <span>Fresh ingredients and seasonal menus</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-block">
+        <div class="container intro-grid">
+          <div class="intro-image">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+              alt="Chef plating gourmet food"
+            />
+          </div>
+          <div class="intro-copy">
+            <p class="eyebrow">Why choose us</p>
+            <h2>Where passion for food meets unforgettable hospitality.</h2>
+            <p>
+              At Group Three Restaurant, we blend refined techniques with comforting
+              flavors to deliver a welcoming, elevated dining experience for every occasion.
+            </p>
+            <div class="check-list">
+              <div>
+                <span>✓</span>
+                <p>Fresh seasonal ingredients sourced daily</p>
+              </div>
+              <div>
+                <span>✓</span>
+                <p>Elegant space designed for intimate dinners and celebrations</p>
+              </div>
+              <div>
+                <span>✓</span>
+                <p>Attentive service with personalized recommendations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section menu-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Our menu</p>
+            <h2>Chef-selected favorites</h2>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Grilled salmon" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Seared Salmon</h3>
+                  <span>$26</span>
+                </div>
+                <p>Served with lemon herb butter and charred seasonal vegetables.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Mushroom pasta" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Truffle Pasta</h3>
+                  <span>$22</span>
+                </div>
+                <p>Silky ribbons of pasta with parmesan cream and wild truffle aroma.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Steak dish" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Prime Ribeye</h3>
+                  <span>$34</span>
+                </div>
+                <p>Perfectly grilled, paired with rosemary potatoes and house jus.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=800&q=80" alt="Fresh salad" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Garden Harvest</h3>
+                  <span>$18</span>
+                </div>
+                <p>Baby greens, roasted beets, goat cheese, and citrus vinaigrette.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Dessert platter" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Chocolate Velvet</h3>
+                  <span>$14</span>
+                </div>
+                <p>Rich dark chocolate mousse with hazelnut crunch and berries.</p>
+              </div>
+            </article>
+
+            <article class="menu-card">
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2e3?auto=format&fit=crop&w=800&q=80" alt="Signature cocktail" />
+              <div class="menu-card-body">
+                <div class="title-row">
+                  <h3>Signature Mojito</h3>
+                  <span>$12</span>
+                </div>
+                <p>Fresh mint, lime, sparkling citrus, and a touch of basil sweetness.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h2>Dining experiences tailored to every moment</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">🍽️</div>
+              <h3>Fine Dining</h3>
+              <p>Elegant tableside service and refined courses designed for indulgent evenings.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🎉</div>
+              <h3>Private Events</h3>
+              <p>Celebrate birthdays, anniversaries, and corporate gatherings in our private dining setup.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🥂</div>
+              <h3>Wine Pairing</h3>
+              <p>Curated wine selections expertly matched to each dish for a complete tasting experience.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🚚</div>
+              <h3>Takeaway & Catering</h3>
+              <p>Enjoy exceptional cuisine in the comfort of home or at your special event.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h2>A glimpse into our atmosphere</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item tall">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant dining area" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Chef preparing a dish" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80" alt="Friends enjoying meals" />
+            </figure>
+            <figure class="gallery-item wide">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" alt="Restaurant table setup" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" alt="Plated dessert" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Elegant kitchen moments" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Guest reviews</p>
+            <h2>People love the Group Three experience</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <blockquote>
+              “The service was exceptional and every dish felt beautifully crafted. A perfect date night spot.”
+              <footer>— Maya R.</footer>
+            </blockquote>
+            <blockquote>
+              “From the ambiance to the flavors, everything felt premium and memorable. We will be back.”
+              <footer>— Daniel K.</footer>
+            </blockquote>
+            <blockquote>
+              “Our private dinner was seamless and elegant. The team made the entire evening unforgettable.”
+              <footer>— Sarah T.</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact us</p>
+            <h2>Reserve your next experience.</h2>
+            <p>
+              Whether it's a casual lunch, a romantic date, or a special celebration,
+              our team is ready to welcome you.
+            </p>
+
+            <div class="contact-details">
+              <div>
+                <span>📍</span>
+                <p>UNITE Kaliro Campus, Kaliro District, Uganda</p>
+              </div>
+              <div>
+                <span>📞</span>
+                <p>+256 700 000 000</p>
+              </div>
+              <div>
+                <span>✉️</span>
+                <p>groupthree@unite.ac.ug</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="Your email" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell us about your reservation or event"></textarea>
+            </label>
+            <button type="submit" class="button button-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Kaliro Taste Restaurant. All rights reserved.</p><p>Contact us:0760085162,0702950184,0784476627 and wayera2004@gmail.com and mpasamichael33@gmail.com</p>
-    </footer></body>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Group Three Restaurant</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
