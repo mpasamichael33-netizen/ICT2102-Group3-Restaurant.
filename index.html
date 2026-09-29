@@ -1,363 +1,799 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Group Three Restaurant offers a refined dining experience with fresh flavors, signature dishes, and warm hospitality."
-    />
-    <title>Group Three Restaurant</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrapper">
-        <a href="#home" class="brand" aria-label="Group Three Restaurant home">
-          <span class="brand-mark">GT</span>
-          <span class="brand-text">Group Three</span>
-        </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ugandan food, friendly service and a welcoming garden at Kaliro Taste Restaurant.">
+  <title>Kaliro Taste Restaurant | Kaliro, Uganda</title>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact Us</a>
-        </nav>
+  <style>
+    :root {
+      --green: #173c2d;
+      --green-light: #285b43;
+      --gold: #c18a2e;
+      --cream: #fffaf1;
+      --ink: #202820;
+      --muted: #657064;
+      --line: #e7ddca;
+      --white: #fff;
+    }
 
-        <a href="#contact" class="button button-primary nav-button">Book a Table</a>
-        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font: 16px/1.65 "Segoe UI", Arial, sans-serif;
+    }
+
+    img { max-width: 100%; }
+
+    a { color: var(--green-light); }
+
+    .container {
+      width: min(1100px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      background: rgba(255, 252, 245, .97);
+      border-bottom: 1px solid #d7c49e;
+      box-shadow: 0 5px 20px #173c2d12;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--green);
+      font: 700 19px Georgia, serif;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      color: #ffe7a6;
+      background: linear-gradient(145deg, #39754f, #123425);
+      border: 2px solid #e6c77e;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px #173c2d26;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .brand:hover .brand-mark {
+      transform: rotate(-5deg);
+      box-shadow: 0 7px 18px #a86c1640;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font: 9px "Segoe UI", Arial, sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    nav { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    .main-nav {
+      align-items: center;
+      padding: 6px;
+      background: #f4efe4;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .main-nav a,
+    .footer-nav a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .main-nav a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--white);
+      background: var(--green-light);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--green-light), var(--green));
+      border: 0;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px #173c2d26;
+      cursor: pointer;
+      font: 600 15px "Segoe UI", Arial, sans-serif;
+      text-align: center;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      color: var(--white);
+      background: var(--gold);
+      box-shadow: 0 8px 22px #9a68134d;
+      transform: translateY(-3px);
+    }
+
+    h1, h2, h3 {
+      color: var(--green);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.18;
+      transition: color .2s ease;
+    }
+
+    h1:hover, h2:hover, h3:hover { color: #a86c16; }
+
+    h1 { margin: 0 0 18px; font-size: clamp(40px, 6vw, 66px); }
+    h1 em { color: #9a7330; font-weight: 500; }
+    h2 { margin: 0 0 16px; font-size: clamp(30px, 4vw, 44px); }
+    h3 { margin: 0 0 9px; font-size: 23px; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 66px 0;
+      background: linear-gradient(135deg, #f7f2e8, #edf3e8);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .lead {
+      max-width: 550px;
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-size: 19px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border: 6px solid var(--white);
+      border-radius: 18px;
+      box-shadow: 0 15px 35px #173c2d26;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 18px 38px #173c2d35;
+    }
+
+    .section { padding: 76px 0; }
+
+    .highlights {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    .highlight-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 17px 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .narrow { max-width: 760px; }
+
+    .narrow p,
+    .section-title p:not(.eyebrow),
+    .form-copy p { color: var(--muted); }
+
+    .menu-section { background: var(--cream); }
+
+    .section-title {
+      max-width: 700px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .section-title h2 {
+      display: inline-block;
+      padding-bottom: 9px;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .food-card {
+      overflow: hidden;
+      background: var(--white);
+      border: 2px solid transparent;
+      border-radius: 11px;
+      box-shadow: 0 4px 16px #173c2d12;
+      transition: .22s ease;
+    }
+
+    .food-card:hover {
+      background: #fff5dc;
+      border-color: #d39b37;
+      box-shadow: 0 15px 28px #a86c1633;
+      transform: translateY(-6px);
+    }
+
+    .food-card img {
+      display: block;
+      width: 100%;
+      height: 195px;
+      object-fit: cover;
+      transition: transform .3s, filter .3s;
+    }
+
+    .food-card:hover img {
+      filter: saturate(1.2) brightness(1.04);
+      transform: scale(1.035);
+    }
+
+    .food-card div { padding: 18px; }
+    .food-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .menu-table-wrap {
+      margin-top: 38px;
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 5px 18px #173c2d0d;
+    }
+
+    .menu-table-wrap > p { color: var(--muted); font-size: 14px; }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-table thead { color: var(--white); background: var(--green); }
+    .price-table tbody th { color: var(--green); font-family: Georgia, serif; }
+    .price-table tbody tr { transition: background-color .18s, color .18s; }
+    .price-table tbody tr:nth-child(even) { background: #fffaf1; }
+
+    .price-table tbody tr:hover {
+      color: #68420d;
+      background: #ffedbd;
+      box-shadow: inset 4px 0 var(--gold);
+    }
+
+    .gallery-section {
+      overflow: hidden;
+      background: linear-gradient(145deg, #f6f0e3, #fffaf1 48%, #edf3e8);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 220px;
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      background: var(--green);
+      border: 4px solid var(--white);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px #173c2d20;
+      isolation: isolate;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .gallery-wide { grid-column: span 2; }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s, filter .35s;
+    }
+
+    .gallery-item::after {
+      position: absolute;
+      inset: 0;
+      background: #d39b3733;
+      content: "";
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s;
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 16px 32px #173c2d30;
+      transform: translateY(-5px);
+    }
+
+    .gallery-item:hover::after { opacity: 1; }
+
+    .gallery-item:hover img {
+      filter: saturate(1.2) brightness(1.06);
+      transform: scale(1.07);
+    }
+
+    .form-section { background: #edf1eb; }
+    .feedback-section { background: var(--cream); }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: start;
+      gap: 48px;
+    }
+
+    .panel {
+      padding: 26px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 8px 25px #173c2d0b;
+    }
+
+    .panel label {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 14px;
+    }
+
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 11px 12px;
+      color: var(--ink);
+      background: var(--white);
+      border: 1px solid #cbd4c9;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    input:hover, select:hover, textarea:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px #d39b3726;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #91b99d;
+      outline-offset: 1px;
+    }
+
+    fieldset {
+      margin: 0 0 16px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    legend { padding: 0 5px; font-size: 14px; font-weight: 700; }
+
+    .choice {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 7px;
+      margin: 4px 15px 4px 0 !important;
+      font-weight: 400 !important;
+    }
+
+    .choice input { accent-color: var(--green-light); }
+    .consent { display: flex !important; }
+    .form-note { color: var(--green-light); font-size: 13px; }
+
+    .contact-section { background: var(--cream); }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .text-link:hover { color: #9a6412; text-decoration: underline; }
+
+    footer {
+      padding: 23px 0;
+      color: var(--white);
+      background: #102c21;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-nav { gap: 17px; }
+    .footer-nav a { color: var(--white); font-size: 14px; }
+    .footer-nav a:hover { color: #e9bd62; }
+
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    @media (max-width: 900px) {
+      .nav-wrap { flex-wrap: wrap; padding: 12px 0; }
+      .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 16px;
+      }
+      .hero-grid, .form-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-img { height: 300px; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 54px 0; }
+      .hero { padding: 44px 0; }
+      .hero-img { height: 230px; }
+      .highlight-row { display: grid; grid-template-columns: 1fr 1fr; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 155px; }
+      .gallery-wide { grid-column: span 2; }
+      .fields { grid-template-columns: 1fr; }
+      .panel { padding: 19px; }
+      .menu-table-wrap { overflow-x: auto; padding: 15px; }
+      .price-table { min-width: 550px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-mark">KT</span>
+        <span>Kaliro Taste<small>Restaurant · Kaliro, Uganda</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Our food</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#order">Order / book</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button" href="#order">Make an enquiry</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Welcome to Kaliro Taste</p>
+          <h1>Ugandan flavour.<br><em>A place at our table.</em></h1>
+          <p class="lead">Enjoy freshly prepared local favourites, generous portions and a warm welcome in Kaliro District.</p>
+          <a class="button" href="#menu">Explore our menu →</a>
+          <a class="text-link" href="#order">Order, book or ask a question ↓</a>
+        </div>
+        <img class="hero-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=720&q=65" alt="Welcoming restaurant dining room" width="720" height="480">
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="home" class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Fresh flavors. Timeless ambiance.</p>
-            <h1>Fine dining that brings people together.</h1>
-            <p class="lead">
-              Discover a modern culinary experience where locally inspired dishes,
-              curated wines, and warm hospitality create unforgettable evenings.
-            </p>
-            <div class="hero-actions">
-              <a href="#menu" class="button button-primary">Explore Menu</a>
-              <a href="#services" class="button button-secondary">Our Services</a>
-            </div>
-            <ul class="hero-points" aria-label="Restaurant highlights">
-              <li>Chef-crafted menu</li>
-              <li>Luxury dining experience</li>
-              <li>Open daily for lunch & dinner</li>
-            </ul>
-          </div>
+    <section class="highlights" aria-label="Restaurant highlights">
+      <div class="container highlight-row">
+        <span>Freshly prepared</span>
+        <span>Local favourites</span>
+        <span>Friendly service</span>
+        <span>Kaliro District, Uganda</span>
+      </div>
+    </section>
 
-          <div class="hero-visual" aria-label="Restaurant dining table image">
-            <div class="image-card main-card">
-              <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
-                alt="Elegant restaurant interior"
-              />
-            </div>
-            <div class="floating-card floating-card-top">
-              <span class="score">4.9</span>
-              <p>Guest rating</p>
-            </div>
-            <div class="floating-card floating-card-bottom">
-              <span>Chef’s special</span>
-              <strong>Truffle Pasta</strong>
-            </div>
-          </div>
+    <section class="section" id="about">
+      <div class="container narrow">
+        <p class="eyebrow">A little about us</p>
+        <h2>Good food, made with care.</h2>
+        <p>Kaliro Taste Restaurant welcomes families, students, workers and visitors. Join us for a satisfying meal, pick up a takeaway or ask our team about catering and delivery.</p>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Local favourites</p>
+          <h2>Our food</h2>
+          <p>Sample menu and prices in Ugandan shillings. Confirm current prices with the restaurant before publishing.</p>
         </div>
-      </section>
 
-      <section class="feature-bar">
-        <div class="container feature-grid">
-          <div>
-            <strong>15+</strong>
-            <span>Signature dishes</span>
-          </div>
-          <div>
-            <strong>12 yrs</strong>
-            <span>Crafting memorable experiences</span>
-          </div>
-          <div>
-            <strong>3,500+</strong>
-            <span>Happy guests served</span>
-          </div>
-          <div>
-            <strong>Daily</strong>
-            <span>Fresh ingredients and seasonal menus</span>
-          </div>
+        <div class="menu-grid">
+          <article class="food-card">
+            <img loading="lazy" width="480" height="300" src="https://3.bp.blogspot.com/-82UOsXp8lqE/VcBoSMnqNeI/AAAAAAAAAB4/h8cVY-qHSyM/s640/matoke-2.jpg" alt="Matooke served with beef stew">
+            <div><h3>Matooke &amp; beef</h3><p>Steamed matooke with tender beef and savoury sauce.</p></div>
+          </article>
+          <article class="food-card">
+            <img loading="lazy" width="480" height="300" src="https://volcanoesparkrwanda.org/wp-content/uploads/2024/08/chicken-luwombo.webp" alt="Chicken luwombo cooked in a banana leaf">
+            <div><h3>Chicken luwombo</h3><p>Chicken and vegetables slow-cooked in a banana leaf parcel.</p></div>
+          </article>
+          <article class="food-card">
+            <img loading="lazy" width="480" height="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fresh_fish_stew_with_Matooke%2C_pumpkin%2C_sweet_potatoes_and_french_beans.jpg/480px-Fresh_fish_stew_with_Matooke%2C_pumpkin%2C_sweet_potatoes_and_french_beans.jpg" alt="Fish stew served with matooke and vegetables">
+            <div><h3>Fish &amp; matooke</h3><p>Fish stew with matooke and local vegetable sides.</p></div>
+          </article>
+          <article class="food-card">
+            <img loading="lazy" width="480" height="300" src="https://images.csmonitor.com/csm/2023/04/1155173_4_0427-DDP-OROLEX-LEDE_standard.jpg?alias=standard_900x600" alt="A Ugandan rolex chapati being prepared">
+            <div><h3>Ugandan rolex</h3><p>Egg and vegetables rolled inside freshly cooked chapati.</p></div>
+          </article>
+          <article class="food-card">
+            <img loading="lazy" width="480" height="300" src="https://www.theeastafrican.co.ke/resource/blob/4542766/440986ac3756ce88be25282999b3eafe/katogo-data.jpg" alt="A bowl of Ugandan katogo breakfast stew">
+            <div><h3>Katogo</h3><p>A hearty local breakfast with matooke, potatoes and stew.</p></div>
+          </article>
         </div>
-      </section>
 
-      <section class="section intro-block">
-        <div class="container intro-grid">
-          <div class="intro-image">
-            <img
-              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
-              alt="Chef plating gourmet food"
-            />
-          </div>
-          <div class="intro-copy">
-            <p class="eyebrow">Why choose us</p>
-            <h2>Where passion for food meets unforgettable hospitality.</h2>
-            <p>
-              At Group Three Restaurant, we blend refined techniques with comforting
-              flavors to deliver a welcoming, elevated dining experience for every occasion.
-            </p>
-            <div class="check-list">
-              <div>
-                <span>✓</span>
-                <p>Fresh seasonal ingredients sourced daily</p>
-              </div>
-              <div>
-                <span>✓</span>
-                <p>Elegant space designed for intimate dinners and celebrations</p>
-              </div>
-              <div>
-                <span>✓</span>
-                <p>Attentive service with personalized recommendations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="menu" class="section menu-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Our menu</p>
-            <h2>Chef-selected favorites</h2>
-          </div>
-
-          <div class="menu-grid">
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Grilled salmon" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Seared Salmon</h3>
-                  <span>$26</span>
-                </div>
-                <p>Served with lemon herb butter and charred seasonal vegetables.</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Mushroom pasta" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Truffle Pasta</h3>
-                  <span>$22</span>
-                </div>
-                <p>Silky ribbons of pasta with parmesan cream and wild truffle aroma.</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Steak dish" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Prime Ribeye</h3>
-                  <span>$34</span>
-                </div>
-                <p>Perfectly grilled, paired with rosemary potatoes and house jus.</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=800&q=80" alt="Fresh salad" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Garden Harvest</h3>
-                  <span>$18</span>
-                </div>
-                <p>Baby greens, roasted beets, goat cheese, and citrus vinaigrette.</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Dessert platter" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Chocolate Velvet</h3>
-                  <span>$14</span>
-                </div>
-                <p>Rich dark chocolate mousse with hazelnut crunch and berries.</p>
-              </div>
-            </article>
-
-            <article class="menu-card">
-              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2e3?auto=format&fit=crop&w=800&q=80" alt="Signature cocktail" />
-              <div class="menu-card-body">
-                <div class="title-row">
-                  <h3>Signature Mojito</h3>
-                  <span>$12</span>
-                </div>
-                <p>Fresh mint, lime, sparkling citrus, and a touch of basil sweetness.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section services-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Services</p>
-            <h2>Dining experiences tailored to every moment</h2>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <div class="service-icon">🍽️</div>
-              <h3>Fine Dining</h3>
-              <p>Elegant tableside service and refined courses designed for indulgent evenings.</p>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon">🎉</div>
-              <h3>Private Events</h3>
-              <p>Celebrate birthdays, anniversaries, and corporate gatherings in our private dining setup.</p>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon">🥂</div>
-              <h3>Wine Pairing</h3>
-              <p>Curated wine selections expertly matched to each dish for a complete tasting experience.</p>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon">🚚</div>
-              <h3>Takeaway & Catering</h3>
-              <p>Enjoy exceptional cuisine in the comfort of home or at your special event.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" class="section gallery-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Gallery</p>
-            <h2>A glimpse into our atmosphere</h2>
-          </div>
-
-          <div class="gallery-grid">
-            <figure class="gallery-item tall">
-              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant dining area" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Chef preparing a dish" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80" alt="Friends enjoying meals" />
-            </figure>
-            <figure class="gallery-item wide">
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" alt="Restaurant table setup" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" alt="Plated dessert" />
-            </figure>
-            <figure class="gallery-item">
-              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Elegant kitchen moments" />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section testimonials">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Guest reviews</p>
-            <h2>People love the Group Three experience</h2>
-          </div>
-
-          <div class="testimonial-grid">
-            <blockquote>
-              “The service was exceptional and every dish felt beautifully crafted. A perfect date night spot.”
-              <footer>— Maya R.</footer>
-            </blockquote>
-            <blockquote>
-              “From the ambiance to the flavors, everything felt premium and memorable. We will be back.”
-              <footer>— Daniel K.</footer>
-            </blockquote>
-            <blockquote>
-              “Our private dinner was seamless and elegant. The team made the entire evening unforgettable.”
-              <footer>— Sarah T.</footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <div class="container contact-grid">
-          <div class="contact-copy">
-            <p class="eyebrow">Contact us</p>
-            <h2>Reserve your next experience.</h2>
-            <p>
-              Whether it's a casual lunch, a romantic date, or a special celebration,
-              our team is ready to welcome you.
-            </p>
-
-            <div class="contact-details">
-              <div>
-                <span>📍</span>
-                <p>UNITE Kaliro Campus, Kaliro District, Uganda</p>
-              </div>
-              <div>
-                <span>📞</span>
-                <p>+256 700 000 000</p>
-              </div>
-              <div>
-                <span>✉️</span>
-                <p>groupthree@unite.ac.ug</p>
-              </div>
-            </div>
-          </div>
-
-          <form class="contact-form">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Your name" />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" placeholder="Your email" />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="5" placeholder="Tell us about your reservation or event"></textarea>
-            </label>
-            <button type="submit" class="button button-primary">Send Message</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>© <span id="year"></span> Group Three Restaurant</p>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+        <div class="menu-table-wrap">
+          <h3>Meal &amp; drinks prices</h3>
+          <p>Sample prices in UGX. Please confirm these amounts with Kaliro Taste before publishing.</p>
+          <table class="price-table">
+            <thead><tr><th scope="col">Item</th><th scope="col">Description</th><th scope="col">Price (UGX)</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Matooke &amp; beef</th><td>Matooke with beef stew</td><td>35,000</td></tr>
+              <tr><th scope="row">Chicken luwombo</th><td>Chicken and vegetables steamed in banana leaf</td><td>55,000</td></tr>
+              <tr><th scope="row">Fish &amp; matooke</th><td>Fish stew with matooke and vegetables</td><td>45,000</td></tr>
+              <tr><th scope="row">Ugandan rolex</th><td>Egg and vegetables rolled in chapati</td><td>20,000</td></tr>
+              <tr><th scope="row">Katogo</th><td>Matooke and potatoes in a hearty stew</td><td>25,000</td></tr>
+              <tr><th scope="row">Soft drinks</th><td>Soda, water or juice</td><td>20,000</td></tr>
+              <tr><th scope="row">Beer</th><td>Local or imported bottle</td><td>30,000</td></tr>
+              <tr><th scope="row">Wine</th><td>Glass of house wine</td><td>45,000</td></tr>
+              <tr><th scope="row">Spirits / cocktails</th><td>Selected spirits or mixed drinks</td><td>60,000–100,000</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">A place to relax and enjoy</p>
+          <h2>Restaurant, garden &amp; dining gallery</h2>
+          <p>Photos show restaurant gardens, outdoor spaces and people enjoying a meal in Uganda.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-wide"><img loading="lazy" width="720" height="420" src="https://visitkampala.kcca.go.ug/user_files/djvXu7v23nsr.jpg" alt="People sharing a meal outdoors at a restaurant in Uganda"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://pub-5bcc3edf34304d04b59dc91e1ad9d2fd.r2.dev/uganda.tortoisepath.com/uploads/2024/11/13083016/Uhuru-Restaurant-Mengo-Kampala-Uganda-TortoisePathcom-2.jpeg" alt="Guests enjoying time together in a Ugandan restaurant"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://visitkampala.kcca.go.ug/user_files/13JS2ajga24s.jpg" alt="Family sharing dinner at a restaurant in Uganda"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://www.monitor.co.ug/resource/image/1781232/landscape_ratio16x9/1600/900/8053cbe389e9263c60e8b7160e9b1674/HZ/life04pix.jpg" alt="Traditional Ugandan food being served in a restaurant"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://visitkampala.kcca.go.ug/user_files/8oZFBBWKroWI.jpg" alt="Garden dining area at a Ugandan restaurant"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://pbs.twimg.com/media/Ggqq-aaXkAE4u_N.jpg" alt="Friends enjoying dinner together at a restaurant in Uganda"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://clubrunner.blob.core.windows.net/00000009165/PhotoAlbum/capital-kitchen-friday-lazy-lunch/IMG-20181019-WA0030.jpg" alt="A group sharing a meal in an outdoor restaurant setting"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://image-tc.galaxy.tf/wijpeg-b3pq3ed7ooc6ii60kw8qse9ne/chatgpt-image-apr-24-2026-05-14-14-pm-1_standard.jpg?crop=0%2C49%2C1234%2C926" alt="Friends sharing dinner at a restaurant in Uganda"></figure>
+          <figure class="gallery-item gallery-wide"><img loading="lazy" width="720" height="420" src="https://visitkampala.kcca.go.ug/user_files/WN2zOhcA81iO.jpg" alt="Thatched outdoor restaurant pavilion surrounded by a garden in Kampala"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://www.kampala-hotels-ug.com/data/Photos/450x450w/9177/917716/917716777.JPEG" alt="Garden path and outdoor restaurant at Forest Cottages in Kampala"></figure>
+          <figure class="gallery-item"><img loading="lazy" width="480" height="320" src="https://cdn.tripinafrica.com/800x400/places/khyber-pass-restaurant.jpg" alt="Garden patio with tables beneath leafy trees at a Kampala restaurant"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about-services">
+      <div class="container narrow">
+        <p class="eyebrow">Enjoy it your way</p>
+        <h2>Dine in, takeaway or ask about catering.</h2>
+        <p>Use the form below to tell us what you need. We will follow up using the contact details you provide.</p>
+        <a class="text-link" href="#order">Go to the order and booking form →</a>
+      </div>
+    </section>
+
+    <section class="section form-section" id="order">
+      <div class="container form-grid">
+        <div class="form-copy">
+          <p class="eyebrow">Order or booking enquiry</p>
+          <h2>How can we help?</h2>
+          <p>Complete the form and your email app will open with your enquiry ready to send.</p>
+          <p><strong>Call:</strong> <a href="tel:+256760085162">+256 760 085162</a><br>
+            <a href="tel:+256702950184">+256 702 950184</a><br>
+            <strong>Email:</strong> <a href="mailto:wayera2004@gmail.com">wayera2004@gmail.com</a>
+          </p>
+        </div>
+
+        <form class="panel" id="order-form" data-mailto="wayera2004@gmail.com">
+          <div class="fields">
+            <label>Full name<input name="name" autocomplete="name" required></label>
+            <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+            <label>Phone number<input name="phone" type="tel" autocomplete="tel" required></label>
+            <label>What do you need?
+              <select name="request" required>
+                <option value="">Choose one</option>
+                <option>Food order</option><option>Table booking</option>
+                <option>Takeaway</option><option>Catering</option>
+                <option>Delivery question</option><option>Other enquiry</option>
+              </select>
+            </label>
+            <label>Preferred date<input name="date" type="date"></label>
+            <label>Number of guests / portions<input name="quantity" type="number" min="1" value="1"></label>
+          </div>
+
+          <fieldset>
+            <legend>How would you like to enjoy your meal?</legend>
+            <label class="choice"><input type="radio" name="service" value="Dine in" required> Dine in</label>
+            <label class="choice"><input type="radio" name="service" value="Takeaway"> Takeaway</label>
+            <label class="choice"><input type="radio" name="service" value="Delivery enquiry"> Delivery enquiry</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Food preferences (select any)</legend>
+            <label class="choice"><input type="checkbox" name="preference" value="Vegetarian"> Vegetarian</label>
+            <label class="choice"><input type="checkbox" name="preference" value="No chilli"> No chilli</label>
+            <label class="choice"><input type="checkbox" name="preference" value="Mild spice"> Mild spice</label>
+          </fieldset>
+
+          <label>Meal or event details
+            <textarea name="details" rows="4" placeholder="Tell us the dishes, time, location or other details."></textarea>
+          </label>
+          <button class="button" type="submit">Submit order / booking enquiry →</button>
+          <p class="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="container form-grid">
+        <div class="form-copy">
+          <p class="eyebrow">Your feedback matters</p>
+          <h2>Tell us about your visit.</h2>
+          <p>Your comments help us make every meal and visit better.</p>
+        </div>
+
+        <form class="panel" id="feedback-form" data-mailto="mpasamichael33@gmail.com">
+          <label>Your name (optional)<input name="name" autocomplete="name"></label>
+          <label>How was your experience?
+            <select name="rating" required>
+              <option value="">Choose a rating</option>
+              <option>Excellent</option><option>Very good</option>
+              <option>Good</option><option>Fair</option>
+              <option>Needs improvement</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>What would you like to comment on?</legend>
+            <label class="choice"><input type="checkbox" name="topic" value="Food"> Food</label>
+            <label class="choice"><input type="checkbox" name="topic" value="Service"> Service</label>
+            <label class="choice"><input type="checkbox" name="topic" value="Cleanliness"> Cleanliness</label>
+            <label class="choice"><input type="checkbox" name="topic" value="Value"> Value</label>
+          </fieldset>
+
+          <label>Your feedback<textarea name="comments" rows="5" required placeholder="Share your thoughts or suggestions"></textarea></label>
+          <label class="choice consent"><input type="checkbox" name="followup" value="Yes"> I am happy for the restaurant to contact me about this feedback.</label>
+          <label>Email or phone (if you want a reply)<input name="contact"></label>
+          <button class="button" type="submit">Submit website feedback →</button>
+          <p class="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container narrow">
+        <p class="eyebrow">Come say hello</p>
+        <h2>Find us in Kaliro.</h2>
+        <p>Kaliro District, Uganda</p>
+        <p><a href="tel:+256760085162">+256 760 085162</a> · <a href="mailto:wayera2004@gmail.com">Email the restaurant</a></p>
+        <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Kaliro%2C+Uganda" target="_blank" rel="noopener">Find Kaliro on Google Maps ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Kaliro Taste Restaurant</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#home">Home</a><a href="#menu">Our food</a>
+        <a href="#gallery">Gallery</a><a href="#order">Order / book</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function valuesFor(form, name) {
+      return Array.from(form.querySelectorAll(`[name="${name}"]`))
+        .filter(field => !["checkbox", "radio"].includes(field.type) || field.checked)
+        .map(field => field.value.trim())
+        .filter(Boolean)
+        .join(", ");
+    }
+
+    document.querySelectorAll("form[data-mailto]").forEach(form => {
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        const names = [...new Set(
+          Array.from(form.elements).map(field => field.name).filter(Boolean)
+        )];
+
+        const body = names.map(name =>
+          `${name.replaceAll("_", " ")}: ${valuesFor(form, name) || "Not provided"}`
+        ).join("\n");
+
+        const subject = form.id === "feedback-form"
+          ? "Kaliro Taste website feedback"
+          : "Kaliro Taste order or booking enquiry";
+
+        const mailto = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        form.querySelector(".form-note").textContent =
+          "Your email app should open with your message. Review it and press Send to deliver it.";
+        window.location.href = mailto;
+      });
+    });
+  </script>
+</body>
 </html>
+```
